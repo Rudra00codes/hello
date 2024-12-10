@@ -3,15 +3,161 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockchain Technology Showcase</title>
   <base href="/" />
   <link rel="icon" href="/favicon.ico" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      animation: fadeIn 2s;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 3s infinite alternate;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #b0c4de;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .animated-blocks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 50px 0;
+    }
+
+    .block {
+      background: #0f3460;
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .block:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translate(-50%, -50%);
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .block span {
+      font-size: 1.5rem;
+      color: #00f2fe;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      background: #0f3460;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+      color: #b0c4de;
+    }
+
+    @keyframes gradientText {
+      from {
+        background-position: 0%;
+      }
+
+      to {
+        background-position: 100%;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <div class="container">
+    <div class="hero">
+      <h1>Blockchain Revolution</h1>
+      <p>
+        Explore the transformative power of blockchain technology. Secure, decentralized, and immutable.
+      </p>
+    </div>
+    <div class="animated-blocks">
+      <div class="block"><span>1</span></div>
+      <div class="block"><span>2</span></div>
+      <div class="block"><span>3</span></div>
+      <div class="block"><span>4</span></div>
+    </div>
+    <div class="footer">
+      <p>© 2024 Blockchain Showcase. All rights reserved.</p>
+    </div>
+  </div>
 </body>
 
 </html>
